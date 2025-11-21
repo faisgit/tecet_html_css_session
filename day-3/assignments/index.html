@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSS Project Hub — 10 Assignments</title>
+  <style>
+    :root{ --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#6ee7b7; --radius:12px; --gap:18px }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, Arial, sans-serif; margin:0; background:linear-gradient(180deg,#071028,#0f1724); color:#e6eef6; -webkit-font-smoothing:antialiased}
+
+    /* Layout container */
+    .container{max-width:1100px; margin:28px auto; padding:20px}
+    header{display:flex; align-items:center; gap:14px; flex-wrap:wrap}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#34d399,#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;flex:0 0 44px}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:6px 0 18px;color:var(--muted);max-width:760px}
+
+    /* Assignments grid */
+    .assign-list{display:grid; gap:14px; grid-template-columns: 1fr}
+    .assign{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:16px; border-radius:10px; border:1px solid rgba(255,255,255,0.03); display:flex; flex-direction:column}
+    .assign h3{margin:0 0 8px; font-size:16px}
+    .assign p{margin:0 0 10px;color:var(--muted); line-height:1.45}
+    .meta{color:var(--muted); font-size:13px}
+
+    /* Submission card */
+    .submission{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+
+    footer{margin-top:22px;color:var(--muted); font-size:13px}
+
+    /* Responsive typography and spacing */
+    @media (min-width:700px){
+      .assign-list{grid-template-columns:repeat(2,1fr)}
+      h1{font-size:22px}
+    }
+    @media (min-width:1100px){
+      .assign-list{grid-template-columns:repeat(3,1fr)}
+      .container{padding:28px}
+    }
+
+    /* Small screens */
+    @media (max-width:640px){ .container{padding:12px} header{gap:10px} p.lead{font-size:14px} }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="logo" aria-hidden="true">C</div>
+      <div>
+        <h1>CSS Project Hub — Assignments</h1>
+        <p class="lead">10 project-based assignments tailored for your 5-hour CSS course. Each assignment includes requirements and success criteria.</p>
+      </div>
+    </header>
+
+    <section class="assign-list">
+
+      <article class="assign">
+        <h3>1. Personal Profile Card</h3>
+        <p>Create a profile card with image, name, role, short bio and two action buttons.</p>
+        <p class="meta">Requirements: Flexbox centering, avatar with rounded corners, button hover effect, box-shadow, responsive width.</p>
+      </article>
+
+      <article class="assign">
+        <h3>2. Responsive Pricing Table</h3>
+        <p>Design 3 pricing plans (Basic / Pro / Enterprise). Highlight the recommended plan.</p>
+        <p class="meta">Requirements: Grid or Flex layout, featured card styling, responsive collapse to single column under 600px.</p>
+      </article>
+
+      <article class="assign">
+        <h3>3. Modern Login Page</h3>
+        <p>Build a centered login form with inputs, focus states and a submit button.</p>
+        <p class="meta">Requirements: Center using Flexbox, gradient background, accessible labels, input focus outline, responsive layout.</p>
+      </article>
+
+      <article class="assign">
+        <h3>4. Portfolio Gallery (Image Grid)</h3>
+        <p>Create a gallery of images that reflows across breakpoints and shows a zoom-on-hover effect.</p>
+        <p class="meta">Requirements: CSS Grid, gap spacing, hover transform & transition, 3→2→1 columns at desktop→tablet→mobile.</p>
+      </article>
+
+      <article class="assign">
+        <h3>5. Landing Page Header + Hero</h3>
+        <p>Design a header with nav and a hero section containing a headline, subtext and call-to-action button.</p>
+        <p class="meta">Requirements: Responsive navigation (stack or hamburger on small screens), hero alignment with image/text, accessible button states.</p>
+      </article>
+
+      <article class="assign">
+        <h3>6. Animated Loader</h3>
+        <p>Create a visually pleasing loader (spinner, bouncing dot, or bar) using CSS animations.</p>
+        <p class="meta">Requirements: Use @keyframes, center the loader, ensure smooth easing and infinite loop.</p>
+      </article>
+
+      <article class="assign">
+        <h3>7. Product Card UI</h3>
+        <p>Design a product card including product image, title, price and an Add to Cart button.</p>
+        <p class="meta">Requirements: Hover lift effect, subtle shadow, responsive stacking of elements for narrow screens.</p>
+      </article>
+
+      <article class="assign">
+        <h3>8. Static Weather Dashboard UI</h3>
+        <p>Create a dashboard with a large temperature card and 3–4 metric cards (humidity, wind, forecast).</p>
+        <p class="meta">Requirements: Grid or Flex layout, readable typography, cards with consistent sizing and responsive behavior.</p>
+      </article>
+
+      <article class="assign">
+        <h3>9. Sidebar + Content Layout</h3>
+        <p>Build a two-column layout with a sticky sidebar that becomes a top bar on mobile.</p>
+        <p class="meta">Requirements: CSS Grid template areas or Flex; sidebar sticky positioning; mobile-first responsive breakpoint.</p>
+      </article>
+
+      <article class="assign">
+        <h3>10. Blog Post Page</h3>
+        <p>Design a readable article page with title, hero image, body text and a right-side related posts sidebar.</p>
+        <p class="meta">Requirements: Comfortable line-length, typographic scale, responsive stacking of sidebar below content on small screens.</p>
+      </article>
+
+    </section>
+
+    <section style="margin-top:18px">
+      <div class="submission">
+        <h3 style="margin:0 0 8px">Submission Guidelines</h3>
+        <ul style="color:var(--muted); margin:0 0 0 18px">
+          <li>Each assignment: single HTML file with embedded CSS (or separate CSS file).</li>
+          <li>Include comments at the top describing which features you implemented.</li>
+          <li>Optional: Add a short screenshot and notes for responsive behavior.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <p style="margin-top:18px">Need templates or solution code for any assignment? Tell me which assignment number and I'll provide a starter file.</p>
+    </footer>
+
+  </main>
+</body>
+</html>
