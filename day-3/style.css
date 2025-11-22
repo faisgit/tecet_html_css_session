@@ -1,0 +1,14 @@
+/* class selector */
+.heading{
+    color: blue;
+    text-align: center;
+}
+/* tag selector */
+p{
+    color: red;
+    text-align: center;
+}
+/* id selector */
+#info{
+    color: cadetblue;
+}
