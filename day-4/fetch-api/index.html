@@ -15,10 +15,11 @@
     </div>
 </body>
     <script>
-        
+        // Fetch products from Fake Store API
 fetch("https://fakestoreapi.com/products")
     .then(response => response.json())
     .then(data => {
+        console.log(data)
         const productContainer = document.getElementById("products");
 
         data.forEach(product => {
