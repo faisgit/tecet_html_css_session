@@ -13,14 +13,19 @@
     <input type="text" id="num2" placeholder="enter your second number">
     <br>
     <button id="btn" onclick="addNumber()">sum</button>
+    <br>
+    <p id="output"></p>
+
 </body>
 <script>
     let head = document.getElementById('head')
     // console.log(head)
     function addNumber(){
-        let numOne = document.getElementById('num1').value
-        let numTwo = document.getElementById('num2').value
+        let numOne = Number(document.getElementById('num1').value)
+        let numTwo = Number(document.getElementById('num2').value)
         console.log(numOne + numTwo)
+        let output = document.getElementById('output')
+        output.innerHTML = numOne+ numTwo
     }
 
 
