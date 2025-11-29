@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Store API Fetch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Fake Store Products</h1>
+
+    <div id="products" class="product-container">
+        
+    </div>
+</body>
+    <script>
+        
+fetch("https://fakestoreapi.com/products")
+    .then(response => response.json())
+    .then(data => {
+        const productContainer = document.getElementById("products");
+
+        data.forEach(product => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+
+            card.innerHTML = `
+                <img src="${product.image}" alt="">
+                <h2>${product.title}</h2>
+                <p class="price">$${product.price}</p>
+                <p>${product.description.substring(0, 100)}...</p>
+            `;
+
+            productContainer.appendChild(card);
+        });
+    })
+    .catch(error => {
+        console.log("Error fetching data:", error);
+    });
+
+    </script>
+</html>
